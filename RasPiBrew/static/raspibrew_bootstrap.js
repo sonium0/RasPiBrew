@@ -204,13 +204,13 @@ function storeData(index, data) {
 
 	if (data.mode == "auto") {
 		//setpoint_C = (5.0/9.0)*(parseFloat(data.set_point) - 32);
-		setpointDataArray[index].push([timeElapsed[index], parseFloat(data.set_point)]);
+		setpointDataArray[index].push([timeElapsed[index]/60, parseFloat(data.set_point)]);
 	} else {
 		setpointDataArray[index] = [];
 	}
 
-	tempDataArray[index].push([timeElapsed[index], parseFloat(data.temp)]);
-	heatDataArray[index].push([timeElapsed[index], parseFloat(data.duty_cycle)]);
+	tempDataArray[index].push([timeElapsed[index]/60, parseFloat(data.temp)]);
+	heatDataArray[index].push([timeElapsed[index]/60, parseFloat(data.duty_cycle)]);
 
 	//tempDataArray[0].push([i,parseFloat(data.temp)]);
 	//heatDataArray[0].push([i,parseFloat(data.duty_cycle)]);
