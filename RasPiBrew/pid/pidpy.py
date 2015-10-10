@@ -113,9 +113,9 @@ class pidpy(object):
 if __name__=="__main__":
 
     sampleTime = 2
-    pid = PID(sampleTime,0,0,0)
+    pid = pidpy(sampleTime,0,0,0)
     temp = 80
     setpoint = 100
     enable = True
-    print pid.calcPID_reg4(temp, setpoint, enable)
+    print(pid.calcPID_reg4(temp, setpoint, enable))
     
